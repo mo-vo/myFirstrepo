@@ -4,15 +4,15 @@ In both cases, the program creates a data structure that holds an array of 10,00
 numbers between 1 and 7. Each process is clocked to evaluate the time taken. As the script 
 will prove, Numpy arrays can run up to 100 times faster than ordinary Python list objects.
 '''
-
+#Python is built on top of another language (C structure) so the processing time is longer
 
 import time
-import numpy as np
+import numpy as np #numpy is the 3rd party so have to create a VE
 import random
 
 start_time_list = time.time()
 
-list1 = [random.randrange(1,7) for i in range(0,10_000_000)]
+list1 = [random.randrange(1,7) for i in range(0,10_000_000)] #underscore allow for commas of numbers
 
 print(f"Python List --- Process finished --- {(time.time() - start_time_list)} seconds ---")
 
